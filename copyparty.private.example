@@ -1,0 +1,12 @@
+[accounts]
+  userA: PASSWORD_HERE
+  admin: PASSWORD_HERE
+
+[groups]
+  admin: admin
+
+[/private]
+  /w/private
+  accs:
+    rwmd: userA
+    A: @admin
