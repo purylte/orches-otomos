@@ -1,12 +1,20 @@
 [accounts]
   userA: PASSWORD_HERE
+  userB: PASSWORD_HERE
   admin: PASSWORD_HERE
 
 [groups]
   admin: admin
 
-[/private]
-  /w/private
+[/userA]
+  /w/userA
   accs:
     rwmd: userA
+    A: @admin
+
+
+[/userB]
+  /w/b
+  accs:
+    rwmd: userB
     A: @admin
