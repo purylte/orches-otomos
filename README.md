@@ -25,5 +25,5 @@ podman run --rm -it --userns=keep-id --pid=host --pull=newer \
   -v ~/.config/containers/systemd:/etc/containers/systemd  \
   --env XDG_RUNTIME_DIR=/run/user/$(id -u) \
   ghcr.io/orches-team/orches init \
-  https://github.com/orches-team/example.git
+  https://github.com/purylte/orches-otomos.git
 ```
