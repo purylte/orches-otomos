@@ -8,10 +8,10 @@ PublishPort=3923:3923
 Volume=/var/mnt/data/copyparty:/w:Z
 Volume=%h/.config/orches/repo/copyparty.conf:/cfg/copyparty.conf:z
 Secret=copyparty_private,type=mount
-X-Version=1
 
 [Service]
 Restart=on-failure
+X-Version=1
 
 [Install]
 WantedBy=default.target
