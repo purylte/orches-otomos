@@ -1,0 +1,17 @@
+[Unit]
+Description=Immich Machine Learning
+Requires=immich-network.service
+After=immich-network.service
+
+[Container]
+Image=ghcr.io/immich-app/immich-machine-learning:v3
+ContainerName=immich_machine_learning
+Network=immich.network
+NetworkAlias=immich-machine-learning
+Volume=immich-model-cache:/cache
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
