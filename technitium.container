@@ -1,0 +1,20 @@
+[Unit]
+Description=Technitium DNS Server
+
+[Container]
+Image=docker.io/technitium/dns-server:15.5.0
+ContainerName=dns-server
+HostName=dns-server
+PublishPort=53:53/udp
+PublishPort=53:53/tcp
+PublishPort=5380:5380/tcp
+Volume=technitium-config:/etc/dns:Z
+Volume=technitium-logs:/var/log/technitium/dns:Z
+Environment=DNS_SERVER_DOMAIN=dns-server
+Environment=DNS_SERVER_LOG_FOLDER_PATH=/var/log/technitium/dns
+
+[Service]
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
