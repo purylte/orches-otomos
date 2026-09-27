@@ -2,7 +2,7 @@
 Description=Technitium DNS Server
 
 [Container]
-Image=docker.io/technitium/dns-server:15.5.0
+Image=docker.io/technitium/dns-server:15.5.1
 ContainerName=dns-server
 HostName=dns-server
 PublishPort=53:53/udp
